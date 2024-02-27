@@ -1,0 +1,41 @@
+#Importa o módulo Tkinter, comumente abreviado como `tk`, que é a biblioteca gráfica padrão do Python
+import tkinter as tk
+import tkinter as Tk
+
+root=tk.Tk()   #Criando a janela principal
+root.title("Minha interface")  #Definindo o título da janela "Exemplo de Interface Gráfica"
+def exibir_mensagem():label.config(text="Botão Clicado!")  #Define uma função chamada `exibir_mensagem` que será chamada quando o botão for clicado
+label = tk.Label(root, text="Pressione o botão", fg='firebrick') #Cria um rótulo (label) para exibir o texto
+label.pack(pady=10) #Coloca o rótulo na janela, com um espaçamento de 10 pixels no eixo Y (vertical).
+botao=tk.Button(root, text="Clique aqui", command=exibir_mensagem, bg='LightSkyBlue')  #Cria um botão com o texto, quando for clicado
+botao.pack()  #coloca o botao na janela
+
+def exibir_mensagem():
+    nome = entrada.get()  # Obtém o nome digitado pelo usuário
+    mensagem = f"Bem-vindo, {nome}!"  # Constrói a mensagem de boas-vindas
+    mensagem_label.config(text=mensagem)  # Define o texto do rótulo de mensagem
+
+# Criando a janela principal
+root = tk.Tk()
+
+# Definindo o título da janela
+root.title("Exemplo de Interface Gráfica")
+
+# Rótulo para instrução
+instrucao_label = tk.Label(root, text="Digite seu nome:")
+instrucao_label.pack(pady=5)  # pady é o espaçamento vertical
+
+# Campo de entrada para o usuário digitar seu nome
+entrada = tk.Entry(root)
+entrada.pack(pady=5)
+
+# Botão para acionar a função exibir_mensagem
+botao = tk.Button(root, text="Clique Aqui", command=exibir_mensagem)
+botao.pack(pady=5)
+
+# Rótulo para exibir a mensagem de boas-vindas
+mensagem_label = tk.Label(root, text="")
+mensagem_label.pack(pady=5)
+
+# Iniciando o loop principal da aplicação
+root.mainloop()
